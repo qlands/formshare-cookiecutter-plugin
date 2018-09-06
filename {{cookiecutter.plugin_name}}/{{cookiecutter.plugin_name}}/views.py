@@ -6,4 +6,6 @@ class myPublicView(formSharePublicView):
 
 class myPrivateView(formSharePrivateView):
     def processView(self):
+        self.setActiveMenu('myCustomMenu')
+        self.showWelcome = True
         return {}
