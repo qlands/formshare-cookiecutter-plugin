@@ -12,11 +12,11 @@ def display_actions_message():
     msg = dedent(
         """
         %(separator)s
-        This is a scaffolding of a FormShare plugin. You can use it as a started
-        to create complex plugins
+        This is a scaffolding of a FormShare plugin. You can use it
+        to create complex plugins.
         %(separator)s
 
-        To make FormShare run this plugin do:
+        To make FormShare to run this plugin do:
             
         Activate the FormShare environment .
             . /path/to/FormShare/bin/activate
@@ -28,7 +28,7 @@ def display_actions_message():
             python setup.py develop
 
         Add the plugin to the FormShare list of plugins by editing the line
-            #formshare.plugins = examplePlugin to read
+            #formshare.plugins = examplePlugin
             formshare.plugins = {{ cookiecutter.plugin_name }}
         
 
