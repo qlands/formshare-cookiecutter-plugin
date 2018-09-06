@@ -1,6 +1,6 @@
 import formshare.plugins as plugins
 import formshare.plugins.utilities as u
-from views import myPublicView,myPrivateView
+from .views import myPublicView,myPrivateView
 
 class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
     plugins.implements(plugins.IRoutes)
