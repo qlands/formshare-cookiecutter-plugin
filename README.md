@@ -6,7 +6,7 @@ Requirements
 ------------
 
 * Python 3.6
-* [FormShare](https://github.com/qlands/formshare)
+* [FormShare 2.0](https://github.com/qlands/FormShare/tree/master-2.0)
 * [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html)
 
 Usage
@@ -21,10 +21,10 @@ Usage
     $ . ./formshare_virtual_env/bin/activate
     $ cd myFormSharePlugin
     $ python setup.py develop
-```
-    Add the plugin to the FormShare list of plugins by editing the following line in development.ini or production.ini
+    ```
+3. Add the plugin to the FormShare list of plugins by editing the following line in development.ini or production.ini
     ```
         #formshare.plugins = examplePlugin
         formshare.plugins = myformshareplugin
     ```
-3. Run your FormShare
+4. Run FormShare
