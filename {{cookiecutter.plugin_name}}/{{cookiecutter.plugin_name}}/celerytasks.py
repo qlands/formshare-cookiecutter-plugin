@@ -10,4 +10,4 @@ def plugin_task():
         30
     )  # Just to test that such sleep is handled by celery and does not hang FormShare
     print("Plugin task finished")
-{% endif %}
+{%- endif %}
