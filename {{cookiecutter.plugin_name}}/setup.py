@@ -35,7 +35,6 @@ setup(
     {%- if cookiecutter.plugin_hasCeleryTasks == "Y" or cookiecutter.plugin_hasCeleryTasks == "y" %}
     entry_points={
         "formshare.plugins": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.plugin_name }}"],
-
         "formshare.tasks": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.celerytasks"],
     },
     {%- else %}
