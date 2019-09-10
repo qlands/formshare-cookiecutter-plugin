@@ -2,6 +2,7 @@ import formshare.plugins as plugins
 import formshare.plugins.utilities as u
 from .views import MyPublicView, MyPrivateView
 
+
 class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
     plugins.implements(plugins.IRoutes)
     plugins.implements(plugins.IConfig)
@@ -24,6 +25,6 @@ class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
         return custom_map
 
     def update_config(self, config):
-        #We add here the templates of the plugin to the config
+        # We add here the templates of the plugin to the config
         u.add_templates_directory(config,'templates')
 

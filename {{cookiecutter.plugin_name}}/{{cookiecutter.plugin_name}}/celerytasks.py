@@ -6,5 +6,5 @@ import time
 @celeryApp.task(base=CeleryTask)
 def plugin_task():
     time.sleep(30) #Just to test that such sleep is handled by celery and does not hang Climmob
-    print "pluginTask finished"
+    print("Plugin task finished")
 {% endif %}
