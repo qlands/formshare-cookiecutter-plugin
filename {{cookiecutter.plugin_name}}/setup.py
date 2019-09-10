@@ -32,10 +32,13 @@ setup(
     zip_safe=False,
     extras_require={"testing": tests_require},
     install_requires=requires,
+    {%- if cookiecutter.plugin_hasCeleryTasks == "Y" or cookiecutter.plugin_hasCeleryTasks == "y" %}
     entry_points={
         "formshare.plugins": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.plugin_name }}"],
-        {%- if cookiecutter.plugin_hasCeleryTasks == "Y" or cookiecutter.plugin_hasCeleryTasks == "y" %}
+
         "formshare.tasks": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.celerytasks"],
-        {%- endif %}
     },
+    {%- else %}
+    entry_points={"formshare.plugins": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.plugin_name }}"]},
+    {%- endif %}
 )
