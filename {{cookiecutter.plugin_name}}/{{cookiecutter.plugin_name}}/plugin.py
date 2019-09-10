@@ -13,18 +13,20 @@ class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
 
     def after_mapping(self, config):
         # We add here a new route /json that returns a JSON
-        custom_map = [u.add_route('plugin_mypublicview',
-                                  '/mypublicview',
-                                  MyPublicView,
-                                  'public.jinja2'),
-                      u.add_route('plugin_myprivateview',
-                                  '/user/{userid}/myprivateview',
-                                  MyPrivateView,
-                                  'private.jinja2')]
+        custom_map = [
+            u.add_route(
+                "plugin_mypublicview", "/mypublicview", MyPublicView, "public.jinja2"
+            ),
+            u.add_route(
+                "plugin_myprivateview",
+                "/user/{userid}/myprivateview",
+                MyPrivateView,
+                "private.jinja2",
+            ),
+        ]
 
         return custom_map
 
     def update_config(self, config):
         # We add here the templates of the plugin to the config
-        u.add_templates_directory(config,'templates')
-
+        u.add_templates_directory(config, "templates")
