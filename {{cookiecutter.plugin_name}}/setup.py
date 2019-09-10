@@ -41,15 +41,9 @@ setup(
     },
     install_requires=requires,
     entry_points={
-        'formshare.plugins': [
-            '{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.plugin_name }}',
-        ]
-        ,
+        'formshare.plugins': ['{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.plugin_name }}',],
         {%- if cookiecutter.plugin_hasCeleryTasks == 'Y' or cookiecutter.plugin_hasCeleryTasks == 'y' %}
-        'formshare.tasks': [
-            '{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.celerytasks',
-        ]
-        ,
+        'formshare.tasks': ['{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.celerytasks',],
         {%- endif %}
     },
 )

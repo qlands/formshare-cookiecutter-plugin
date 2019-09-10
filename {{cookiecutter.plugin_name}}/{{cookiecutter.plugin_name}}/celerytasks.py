@@ -1,4 +1,4 @@
-{% if cookiecutter.plugin_hasCeleryTasks == 'Y' or cookiecutter.plugin_hasCeleryTasks == 'y' %}
+{-% if cookiecutter.plugin_hasCeleryTasks == 'Y' or cookiecutter.plugin_hasCeleryTasks == 'y' %}
 from formshare.config.celery_app import celeryApp
 from formshare.config.celery_class import CeleryTask
 import time
