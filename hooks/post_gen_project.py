@@ -1,14 +1,13 @@
 from textwrap import dedent
 
+
 def main():
     display_actions_message()
 
 
 def display_actions_message():
 
-    vars = dict(
-        separator='=' * 79,
-    )
+    vars = dict(separator="=" * 79)
     msg = dedent(
         """
         %(separator)s
@@ -33,9 +32,11 @@ def display_actions_message():
         
 
         Run FormShare again
-        """ % vars)
+        """
+        % vars
+    )
     print(msg)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

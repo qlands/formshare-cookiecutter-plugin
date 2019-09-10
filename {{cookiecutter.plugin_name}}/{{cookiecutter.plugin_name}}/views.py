@@ -1,11 +1,13 @@
-from formshare.plugins.utilities import formSharePublicView,formSharePrivateView
+from formshare.plugins.utilities import FormSharePublicView, FormSharePrivateView
 
-class myPublicView(formSharePublicView):
-    def processView(self):
+
+class MyPublicView(FormSharePublicView):
+    def process_view(self):
         return {}
 
-class myPrivateView(formSharePrivateView):
-    def processView(self):
-        self.setActiveMenu('myCustomMenu')
+
+class MyPrivateView(FormSharePrivateView):
+    def process_view(self):
+        self.set_active_menu("myCustomMenu")
         self.showWelcome = True
         return {}

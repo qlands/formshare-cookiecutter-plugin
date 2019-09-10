@@ -45,5 +45,11 @@ setup(
             '{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.plugin_name }}',
         ]
         ,
+        {% if cookiecutter.plugin_hasCeleryTasks == 'Y' or cookiecutter.plugin_hasCeleryTasks == 'y' %}
+        'formshare.tasks': [
+            '{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.celerytasks',
+        ]
+        ,
+        {% endif %}
     },
 )
