@@ -10,4 +10,4 @@ class MyPrivateView(FormSharePrivateView):
     def process_view(self):
         self.set_active_menu("myCustomMenu")
         self.showWelcome = True
-        return {}
+        return {'message': self._('Just a message from the plugin')}
