@@ -5,4 +5,4 @@
 # Update the catalog. Run every time translations change
 - python setup.py update_catalog
 # Update the catalog. Run every time translations change. Run after deployment
-- python setup.py update_catalog
+- python setup.py compile_catalog
