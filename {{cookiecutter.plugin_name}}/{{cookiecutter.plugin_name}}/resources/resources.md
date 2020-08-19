@@ -34,11 +34,9 @@ Add the following code in plugin.py to have custom JS and CSS resources in your 
     
 
 3. In your Jinja2 templates you can inject your resources with
-
+    {% raw %}
     ```jinja2
     {% jsresource request,'my_plugin_library','my_js_resource' %}
     {% cssresource request,'my_plugin_library','my_css_resource' %}
     ```
-
-    
-
+    {% endraw %}
