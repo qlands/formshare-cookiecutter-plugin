@@ -10,9 +10,10 @@ Add the following code in plugin.py to have custom static resources in your plug
 
 3. In your Jinja2 templates you can inject your static files with
 
+    {% raw %}
     ```jinja2
     {{request.url_for_static('my_static_file.jpg','my_plugin_static_library')}}
     ```
-
+    {% endraw %}
     
 
