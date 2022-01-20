@@ -1,10 +1,7 @@
 from sqlalchemy import (
     Column,
-    DateTime,
     ForeignKey,
-    ForeignKeyConstraint,
     INTEGER,
-    Index,
     Unicode,
     String,
     Table,
@@ -38,6 +35,9 @@ def add_{{ cookiecutter.plugin_name }}_tables(metadata):
         Column("example_user", ForeignKey("fsuser.user_id"), nullable=False, index=True),
         Column("extras", MEDIUMTEXT(collation="utf8mb4_unicode_ci")),
         Column("tags", MEDIUMTEXT(collation="utf8mb4_unicode_ci")),
+        mysql_charset="utf8mb4",
+        mysql_engine="InnoDB",
+        mysql_collate="utf8mb4_unicode_ci",
     )
 
     mapper(ExampleTable, t_example_item)
