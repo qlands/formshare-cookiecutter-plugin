@@ -21,6 +21,7 @@ Usage
     $ . ./formshare_virtual_env/bin/activate
     $ cd myFormSharePlugin
     $ python setup.py develop
+    # Create and apply an initial version of the DB for the plugin
     $ mv alembic.example.ini alembic.ini
     # Edit the alembic.ini an replace sqlalchemy.url with the one in the FormShare ini file
     $ alembic revision --autogenerate -m "Initial version"
