@@ -9,6 +9,7 @@ class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
     plugins.implements(plugins.IRoutes)
     plugins.implements(plugins.IConfig)
     plugins.implements(plugins.ITranslation)
+    plugins.implements(plugins.IDatabase)
 
     def before_mapping(self, config):
         # We don't add any routes before the host application
@@ -40,3 +41,6 @@ class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
 
     def get_translation_domain(self):
         return "{{ cookiecutter.plugin_name }}"
+
+    def update_orm(self, config):
+        config.include("{{ cookiecutter.plugin_name }}.orm")
