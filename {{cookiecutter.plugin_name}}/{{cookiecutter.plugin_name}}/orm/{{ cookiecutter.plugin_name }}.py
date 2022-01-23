@@ -26,5 +26,3 @@ class ExampleTable(Base):
     tags = Column(MEDIUMTEXT(collation="utf8mb4_unicode_ci"))
 
     fsuser = relationship("User")
-
-
