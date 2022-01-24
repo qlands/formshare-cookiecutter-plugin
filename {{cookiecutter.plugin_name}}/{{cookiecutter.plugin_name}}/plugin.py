@@ -44,3 +44,7 @@ class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
 
     def update_orm(self, config):
         config.include("{{ cookiecutter.plugin_name }}.orm")
+
+    def update_extendable_tables(self, tables_allowed):
+        tables_allowed.append("{{ cookiecutter.plugin_name }}_example")
+        return tables_allowed
