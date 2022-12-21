@@ -18,14 +18,14 @@ Add the following code in plugin.py to have custom JS and CSS resources in your 
     
     def add_js_resources(self, config):
         my_plugin_js = [
-            u.add_js_resource("my_plugin", "my_js_resource", "relative/path/to/resources/my_js_resource.js", None)
+            u.add_js_resource("my_plugin_library", "my_js_resource", "relative/path/to/resources/my_js_resource.js", None)
         ]
         return my_plugin_js
     
     def add_css_resources(self, config):
         my_plugin_css = [
             u.add_css_resource(
-                "my_plugin", "my_css_resource", "relative/path/to/resources/my_js_resource.css", None
+                "my_plugin_library", "my_css_resource", "relative/path/to/resources/my_js_resource.css", None
             )
         ]
         return my_plugin_css
