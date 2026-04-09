@@ -19,14 +19,14 @@ setup(
     long_description=README + "\n\n" + CHANGES,
     classifiers=[
         "Programming Language :: Python",
-        "Framework :: Pyramid",
+        "Framework :: FastAPI",
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
     ],
     author="{{ cookiecutter.plugin_author }}",
     author_email="{{ cookiecutter.plugin_author_email }}",
     url="{{ cookiecutter.plugin_author_url }}",
-    keywords="formshare plugin",
+    keywords="formshare plugin {{ cookiecutter.plugin_name }}",
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
@@ -34,10 +34,10 @@ setup(
     install_requires=requires,
     {%- if cookiecutter.plugin_hasCeleryTasks == "Y" or cookiecutter.plugin_hasCeleryTasks == "y" %}
     entry_points={
-        "formshare.plugins": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.plugin_name }}"],
+        "formshare.plugins": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.class_name }}"],
         "formshare.tasks": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.celerytasks"],
     },
     {%- else %}
-    entry_points={"formshare.plugins": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.plugin_name }}"]},
+    entry_points={"formshare.plugins": ["{{ cookiecutter.plugin_name }} = {{ cookiecutter.plugin_name }}.plugin:{{ cookiecutter.class_name }}"]},
     {%- endif %}
 )
