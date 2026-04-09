@@ -21,7 +21,7 @@ def display_actions_message():
             . /path/to/FormShare/bin/activate
             
         Change directory into your newly created plugin.
-            cd {{ cookiecutter.plugin_name }}
+            cd {{ cookiecutter.plugin_dir }}
 
         Build the plugin
             python setup.py develop

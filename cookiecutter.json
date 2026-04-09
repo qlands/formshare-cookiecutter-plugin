@@ -1,6 +1,8 @@
 {
   "plugin_description": "A FormShare plugin",
-  "plugin_name": "{{cookiecutter.plugin_description.lower().strip().replace(' ', '_').replace(':', '_').replace('-', '_').replace('!', '_')}}",
+  "plugin_dir": "{{cookiecutter.plugin_description.lower().strip().replace(' ', '_').replace(':', '_').replace('-', '_').replace('!', '_')}}",
+  "plugin_name": "e.g., formatlas",
+  "class_name": "e.g., FormAtlas",
   "plugin_hasCeleryTasks": "N",
   "plugin_version": "1.0",
   "plugin_author": "Myself",

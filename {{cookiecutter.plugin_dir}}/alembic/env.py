@@ -29,7 +29,8 @@ target_metadata = Base.metadata
 
 
 def include_object(object, name, type_, reflected, compare_to):
-    return not reflected
+    if type_ == "table" and not name.startswith("{{ cookiecutter.plugin_name }}_"):
+        return False
 
 
 def run_migrations_offline():

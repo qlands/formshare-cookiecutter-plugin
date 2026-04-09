@@ -10,9 +10,6 @@ jinja_extensions = """
 
 
 def extract_formshare(fileobj, *args, **kw):
-    """This code is based on CKAN
-    :Copyright (c) 2006-2018 Open Knowledge Foundation and contributors
-    :license: AGPL V3, see LICENSE for more details."""
     if "options" not in kw:
         kw["options"] = {}
     if "trimmed" not in kw["options"]:

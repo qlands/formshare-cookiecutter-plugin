@@ -6,7 +6,7 @@ Requirements
 ------------
 
 * Python 3.6
-* [FormShare 2.0](https://github.com/qlands/FormShare/tree/master-2.0)
+* [FormShare](https://github.com/qlands/FormShare/tree/master-3.0)
 * [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html)
 
 Usage

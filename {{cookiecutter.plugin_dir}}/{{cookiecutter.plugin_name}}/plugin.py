@@ -5,7 +5,7 @@ import sys
 import os
 
 
-class {{ cookiecutter.plugin_name }}(plugins.SingletonPlugin):
+class {{ cookiecutter.class_name }}(plugins.SingletonPlugin):
     plugins.implements(plugins.IRoutes)
     plugins.implements(plugins.IConfig)
     plugins.implements(plugins.ITranslation)
